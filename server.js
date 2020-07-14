@@ -1,11 +1,16 @@
 // server.js
 //
+import path from 'path';
 import express from 'express';
 const PORT = process.env.HTTP_PORT || 4001;
 const app = express();
+
+app.use(express.static(path.join(__dirname, 'client', 'build')));
+
 app.get('/', (req, res) => {
-  res.send('Flowers smell nice');
+  res.send('Welcome to backend');
 });
+
 app.get('/user', (req, res) => {
   res.json({
     name: 'Kevin E',
