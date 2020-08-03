@@ -8,11 +8,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 // server.js
 //
-var PORT = process.env.HTTP_PORT || 8080;
+var PORT = process.env.PORT || 8080;
 var app = (0, _express["default"])();
-//app.use(_express["default"]["static"](_path["default"].join(__dirname, 'client', 'build')));
+app.use(_express["default"]["static"](_path["default"].join(__dirname, 'client', 'build')));
 app.get('/', function (req, res) {
-  res.send('Welcome to server.js');
+  res.send('Welcome to backend');
 });
 app.get('/user', function (req, res) {
   res.json({
