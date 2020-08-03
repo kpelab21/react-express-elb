@@ -1,1 +1,1 @@
-web: cd client && npm install && node server.compiled.js
+web: cd client && npm install && cd .. && node server.compiled.js
