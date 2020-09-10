@@ -8,7 +8,7 @@ const app = express();
 app.use("/",express.static(path.join(__dirname, 'client', 'build')));
 
 app.get('/', (req, res) => {
-  res.send('Welcome to backend');
+  res.send('Welcome to server.js');
 });
 
 app.get('/user', (req, res) => {
