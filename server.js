@@ -7,9 +7,9 @@ const app = express();
 
 app.use("/",express.static(path.join(__dirname, 'client', 'build')));
 
-app.get('/', (req, res) => {
-  res.send('Welcome to server.js');
-});
+//app.get('/', (req, res) => {
+//  res.send('Welcome to server.js');
+// });
 
 app.get('/user', (req, res) => {
   res.json({
